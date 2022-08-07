@@ -1,0 +1,55 @@
+{
+    "name": "plugide/playground",
+    "description": "Plug IDE playground.",
+    "type": "library",
+    "license": "MIT",
+    "support": {
+      "issues": "https://github.com/plugide/playground/issues",
+      "source": "https://github.com/plugide/playground"
+    },
+    "authors": [
+        {
+            "name": "Dev plugide",
+            "email": "dev@plugide.com"
+        }
+    ],
+    "require": {
+        "plugide/define": "1.x-dev"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.1",
+        "orchestra/testbench": "^7.6",
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+      "psr-4": {
+        "Plugide\\Playground\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Plugide\\Playground\\Tests\\": "tests/"
+      }
+    },
+    "scripts": {
+      "format": "vendor/bin/pint --preset psr12",
+      "analyse": "vendor/bin/phpstan analyse",
+      "test" : "vendor/bin/phpunit"
+    },
+    "extra": {
+      "branch-alias": {
+        "dev-main": "1.x-dev"
+      },
+      "laravel": {
+        "providers": [
+          "Plugide\\Playground\\Providers\\PlaygroundServiceProvider"
+        ]
+      }
+    },
+    "config": {
+      "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

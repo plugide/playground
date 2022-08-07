@@ -1,0 +1,4 @@
+name: lite
+files:
+  define: .plugin.yml
+  plugin: .plugin.yml

@@ -1,0 +1,6 @@
+name: plugin
+files:
+  plugin: .plugin.yml
+  define: define.php
+  observer: observer.php
+  AppServiceProvider: src/Providers/AppServiceProvider.php
